@@ -413,7 +413,7 @@ export const Ccmform = () => {
       copd:par.copd
     })
   }
-  
+
  if(patientID !== null){
       getAllData()
     }
@@ -1525,6 +1525,7 @@ export const Ccmform = () => {
 
                               </Grid>
 
+
                               <Grid xl={12} lg={12} md={12} sm={12} xs={12}>
 
                                 <Box sx={{ minHeight: '200px', m: '10px 10px 0 15px' }}>
@@ -1541,8 +1542,7 @@ export const Ccmform = () => {
                                       <Box>
                                         <Box sx={{ m: '10px 10px', display: 'flex', flexDirection: { sm: 'column', xs: 'column', lg: 'row', md: 'row' } }}>
 
-
-                                          <FormLabel sx={{ fontSize: '15px', display: 'flex', mr: '15px', width: { lg: '60%', md: '60%', sm: '80%', xs: '90%' }, flexDirection: { sm: 'column', xs: 'column', lg: 'row', md: 'row' } }} id="demo-radio-buttons-group-label">
+                                          <FormLabel sx={{mt:'15px', fontSize: '15px', display: 'flex', mr: '15px', width: { lg: '60%', md: '60%', sm: '80%', xs: '90%' }, flexDirection: { sm: 'column', xs: 'column', lg: 'row', md: 'row' } }} id="demo-radio-buttons-group-label">
                                             In last one month, have you any charges in your medication?
                                           </FormLabel>
 
@@ -1574,7 +1574,7 @@ export const Ccmform = () => {
                                                 name='medicare'
                                                 type='text'
                                                 size='small'
-                                                // label='Phone'
+                                                
                                                 sx={{ width: '8rem', display: 'none' }}
                                               />
                                               :
@@ -1584,7 +1584,7 @@ export const Ccmform = () => {
                                                 name='medicare'
                                                 type='text'
                                                 size='small'
-                                                // label='Phone'
+                                               
                                                 sx={{ width: '8rem' }}
                                               />
                                             }
