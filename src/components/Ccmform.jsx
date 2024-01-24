@@ -260,6 +260,7 @@ export const Ccmform = () => {
   const handleForm = (e) => {
     e.preventDefault()
     postData()
+    clearData()
   }
 
   //  combine multiple states data for post data 
@@ -423,6 +424,68 @@ export const Ccmform = () => {
      
   },[])
   
+  const clearData = ()=>{
+
+    setOther_Prob('')
+    setRadioPsycho({
+      patient_Activities:'',
+      pateint_Livesw:'',
+      patient_LivesAt:'',
+      patient_CareG:'',
+     
+    })
+    setRadioValue({
+      any_Surgeries:'',
+      changes_In_Medicine:'',
+      hospitalized_Or_Not:'',
+    })
+    setHealthCare({
+      last_Visit:'',
+      specialty:'',
+      first_Visit:'',
+      health_Care_Name:''
+    })
+    setCareTaker({
+      care_Taker_Contact:'',
+      care_Taker_Name:''
+    })
+    setFlue_Vaccine('')
+    setPneumonia_Vaccine('')
+    setFor_Males_Only('')
+    setColonoscopy('')
+    setMammorgram('')
+    setAllergies_Reviewed('')
+    setCurrent_Symptoms('')
+    setMedications('')
+    setCronicDataH({
+      h_Measurable_Goal:'',
+      h_Diagones:'',
+      h_Plan:'',
+    })
+    setH_Status('')
+    setCronicData({
+      a_Measurable_Goal:'',
+      a_Diagones:'',
+      a_Plan:''
+    })
+    setA_Status('')
+    setCreated_By('')
+    setTime_Spent(dayjs('2022-04-17T15:30'))
+    setSumission_Date(dayjs('2022-04-17'))
+    setCheckBox({
+      hypertension:'',
+      dyslipidemia:'',
+      hypothyroidism:'',
+      anemia:'',
+      chronic_Kidney:'',
+      liver_Cirrhosis:'',
+      coronory_artry_disease:'',
+      atrial_fibrillation:'',
+      congestive_heart_failure:'',
+      copd:''
+    })
+
+  }
 
   return (
     <>
@@ -632,7 +695,7 @@ export const Ccmform = () => {
                     <Grid container spacing={3}>
                       <Grid item xl={3} lg={3} md={12} sm={12} xs={12}>
 
-                        <Paper>
+                        <Paper elevation={8}>
                           <Box sx={{
                             height: '270px', m: '8px 0', overflowY: 'auto', scrollbarWidth: 'thin',
                             scrollbarColor: '#a0a0a0 #f0f0f0',
@@ -1700,7 +1763,7 @@ export const Ccmform = () => {
 
                 <Box sx={{ display: 'flex', gap: '1rem', m: '10px 50px 25px auto', width: '150px' }}>
                   <Button onClick={handleForm} variant='contained' sx={{ borderRadius: '25px', padding: '8px 40px' }}>Save</Button>
-                  <Button onClick={handleClose} variant='contained' sx={{ borderRadius: '25px', padding: '8px 40px' }}>Cancel</Button>
+                  <Button onClick={clearData} variant='contained' sx={{ borderRadius: '25px', padding: '8px 40px' }}>Cancel</Button>
                 </Box>
               </Box>
             </Paper>
